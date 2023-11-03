@@ -1,4 +1,4 @@
-set tabstop=2
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 syntax on
-set expandtab
+set autoindent smarttab expandtab
+set shiftround tabstop=2 shiftwidth=2
