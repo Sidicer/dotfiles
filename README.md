@@ -4,6 +4,7 @@
 ### Dependencies
 ```
 sway-nvidia
+neovim
 foot
 rofi-lbonn-wayland-git
 wl-clipboard
