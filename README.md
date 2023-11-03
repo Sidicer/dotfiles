@@ -5,4 +5,8 @@
 ```
 sway-nvidia
 foot
+rofi-lbonn-wayland-git
+wl-clipboard
+slurp
+grim
 ```
