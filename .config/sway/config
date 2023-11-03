@@ -12,16 +12,14 @@ set $browser firefox
 gaps inner 8
 default_border pixel 2
 
-set $cl_high #962a54
-set $cl_indi #962a54
-set $cl_back #231f20
-set $cl_fore #962a54
-set $cl_urge #ee2e24
+# class                 border  bground text    indicator child_border
+client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
+client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
+client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
+client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
+client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
 
-client.focused          $cl_high $cl_high $cl_fore $cl_indi $cl_high
-client.focused_inactive $cl_back $cl_back $cl_fore $cl_back $cl_back
-client.unfocused        $cl_back $cl_back $cl_fore $cl_back $cl_back
-client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
+client.background       #F8F8F2
 
 ### Output configuration
 #
@@ -222,11 +220,16 @@ bar {
     status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
 
     colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
+    	background #282A36
+    	statusline #F8F8F2
+    	separator  #44475A
+
+    	focused_workspace  #44475A #44475A #F8F8F2
+    	active_workspace   #282A36 #44475A #F8F8F2
+    	inactive_workspace #282A36 #282A36 #BFBFBF
+    	urgent_workspace   #FF5555 #FF5555 #F8F8F2
+    	binding_mode       #FF5555 #FF5555 #F8F8F2
     }
 }
 
 include /etc/sway/config.d/*
-include /home/sidicer/Themes/i3-master/.config/i3/config
