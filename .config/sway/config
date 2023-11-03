@@ -5,8 +5,9 @@ set $down j
 set $up k
 set $right l
 set $term foot
-set $menu dmenu_path | wmenu | xargs swaymsg exec --
+set $menu rofi -show run | xargs swaymsg exec --
 set $browser firefox
+set $screenshot grim -g "$(slurp -d)" - | wl-copy -t image/png
 
 # VISUAL
 gaps inner 8
@@ -82,6 +83,9 @@ output DP-1 position 4520,100 transform 270
 
     # Start your browser
     bindsym $mod+Shift+b exec $browser
+
+    # Screenshot
+    bindsym $mod+Shift+s exec $screenshot
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
