@@ -106,3 +106,6 @@ export GPG_TTY
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs | grep agent-ssh-socket | cut -d ':' -f 2)
 
 alias vim="nvim"
+if [[ $TERM = "foot" ]]; then
+  alias ssh='TERM=xterm ssh'
+fi
