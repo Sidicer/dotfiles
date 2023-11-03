@@ -10,4 +10,7 @@ rofi-lbonn-wayland-git
 wl-clipboard
 slurp
 grim
+waybar
+otf-font-awesome
+swaylock
 ```
