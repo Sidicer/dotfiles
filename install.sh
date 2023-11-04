@@ -8,6 +8,7 @@ set -o nounset
 set -o errtrace
 set -o pipefail
 IFS=$'\n\t'
+PATH=/usr/local/bin:$PATH
 
 _SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 export _SCRIPT_DIR=${_SCRIPT_DIR%/*}
@@ -41,13 +42,13 @@ if [[ $gpu ]]; then
   sudo mkinitcpio -P
   echo "!!! Add \"nvidia-drm.modeset=1\" to kernel launch parameters (GRUB_CMDLINE_LINUX) manually !!!"
   <<EOF>> $HOME/.zprofile cat
-  if [[ -z $DISPLAY && $TTY = /dev/tty1 ]]; then
+  if [[ -z \$DISPLAY && \$TTY = /dev/tty1 ]]; then
     exec sway-nvidia
   fi
 EOF
 else
   <<EOF>> $HOME/.zprofile cat
-  if [[ -z $DISPLAY && $TTY = /dev/tty1 ]]; then
+  if [[ -z \$DISPLAY && \$TTY = /dev/tty1 ]]; then
     exec sway
   fi
 EOF
