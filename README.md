@@ -14,4 +14,5 @@ waybar
 otf-font-awesome
 swaylock
 pinentry-rofi
+ranger
 ```
