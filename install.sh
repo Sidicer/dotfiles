@@ -37,6 +37,17 @@ if [[ $gpu ]]; then
   sudo sed -i "s/MODULES=()/MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)/" /etc/mkinitcpio.conf
   sudo mkinitcpio -P
   echo "!!! Add \"nvidia-drm.modeset=1\" to kernel launch parameters (GRUB_CMDLINE_LINUX) manually !!!"
+  <<EOF>> $HOME/.zprofile cat
+  if [[ -z $DISPLAY && $TTY = /dev/tty1 ]]; then
+    exec sway-nvidia
+  fi
+EOF
+else
+  <<EOF>> $HOME/.zprofile cat
+  if [[ -z $DISPLAY && $TTY = /dev/tty1 ]]; then
+    exec sway
+  fi
+EOF
 fi
 
 echo "Script succeeded."
