@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# Arch Linux & Sway WM
-# +dotfiles
-#
+
+# Arch w/ Sway on NVIDIA
+# packages & dotfiles
 # 2023 Deividas Gedgaudas • sidicer.lt
 
 set -o nounset
