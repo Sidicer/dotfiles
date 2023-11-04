@@ -41,6 +41,7 @@ if [[ $gpu ]]; then
   sudo sed -i "s/MODULES=()/MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)/" /etc/mkinitcpio.conf
   sudo mkinitcpio -P
   echo "!!! Add \"nvidia-drm.modeset=1\" to kernel launch parameters (GRUB_CMDLINE_LINUX) manually !!!"
+  sudo mkdir -p /etc/pacman.d/hooks && sudo cp $_SCRIPT_DIR/nvidia.hook /etc/pacman.d/hooks/nvidia.hook
   <<EOF>> $HOME/.zprofile cat
   if [[ -z \$DISPLAY && \$TTY = /dev/tty1 ]]; then
     exec sway-nvidia
