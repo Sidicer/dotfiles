@@ -44,3 +44,11 @@ sway-nvidia
 ## Notes
 
 `nvidia.hook` is required for succesfully updating NVIDIA drivers. If you do not regenerate your initramfs there is going to be an API mismatch after reboot and you won't be able to launch Sway.
+
+## Obligation:
+
+[Arch Linux NVIDIA drivers installation guide](https://github.com/korvahannu/arch-nvidia-drivers-installation-guide)  
+by korvahannu
+
+[sway-nvidia](https://github.com/crispyricepc/sway-nvidia)
+by crispyricepc
