@@ -8,7 +8,6 @@ rofi-lbonn-wayland-git
 slurp
 sway
 swaylock
-sway-nvidia
 waybar
 wl-clipboard
 zsh
