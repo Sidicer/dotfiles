@@ -1,0 +1,15 @@
+foot
+grim
+neofetch
+neovim
+otf-font-awesome
+pinentry-rofi
+ranger
+rofi-lbonn-wayland-git
+slurp
+sway
+swaybg
+swaylock
+waybar
+wl-clipboard
+zsh
