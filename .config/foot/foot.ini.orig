@@ -25,7 +25,7 @@
 # initial-window-size-pixels=700x500  # Or,
 # initial-window-size-chars=<COLSxROWS>
 # initial-window-mode=windowed
-pad=20x20                             # optionally append 'center'
+# pad=0x0                             # optionally append 'center'
 # resize-delay-ms=100
 
 # notify=notify-send -a ${app-id} -i ${app-id} ${title} ${body}
@@ -36,8 +36,6 @@ pad=20x20                             # optionally append 'center'
 # workers=<number of logical CPUs>
 # utmp-helper=/usr/lib/utempter/utempter  # When utmp backend is ‘libutempter’ (Linux)
 # utmp-helper=/usr/libexec/ulog-helper    # When utmp backend is ‘ulog’ (FreeBSD)
-
-include=/usr/share/foot/themes/dracula
 
 [environment]
 # name=value
@@ -77,7 +75,7 @@ include=/usr/share/foot/themes/dracula
 # long-press-delay=400
 
 [colors]
- alpha=0.99
+# alpha=1.0
 # background=242424
 # foreground=ffffff
 # flash=7f7f00
@@ -114,13 +112,13 @@ include=/usr/share/foot/themes/dracula
 # 255 = <256-color palette #255>
 
 ## Misc colors
-selection-foreground=ffffff
-selection-background=44475a
+# selection-foreground=<inverse foreground/background>
+# selection-background=<inverse foreground/background>
 # jump-labels=<regular0> <regular3>          # black-on-yellow
 # scrollback-indicator=<regular0> <bright4>  # black-on-bright-blue
 # search-box-no-match=<regular0> <regular1>  # black-on-red
 # search-box-match=<regular0> <regular3>     # black-on-yellow
-urls=8be9fd
+# urls=<regular3>
 
 [csd]
 # preferred=server
@@ -225,4 +223,3 @@ urls=8be9fd
 # select-row=BTN_LEFT-4
 
 # vim: ft=dosini
-
