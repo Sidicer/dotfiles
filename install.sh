@@ -9,6 +9,9 @@ set -o errtrace
 set -o pipefail
 IFS=$'\n\t'
 
+_SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+export _SCRIPT_DIR=${_SCRIPT_DIR%/*}
+
 echo "Installing dependencies and Yay..."
 sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay &&  makepkg -si
 if [ $? -eq 1 ]; then
@@ -16,15 +19,15 @@ if [ $? -eq 1 ]; then
 fi
 
 echo "Installing required packages..."
-packages=$(sort pkglist.txt)
-nvidia_packages=$(sort pkglist_n.txt)
+packages=$(sort $_SCRIPT_DIR/pkglist.txt)
+nvidia_packages=$(sort $_SCRIPT_DIR/pkglist_n.txt)
 yay -S --sudoloop --noconfirm --needed $packages
 if [ $? -eq 1 ]; then
   "Installation failed, exiting..."
 fi
 
 echo "Copying configuration to home directory..."
-cp -r .config .gnupg .zshrc $HOME/.
+cp -r $_SCRIPT_DIR/.config $_SCRIPT_DIR/.gnupg $_SCRIPT_DIR/.zshrc $HOME/.
 if [ $? -eq 1 ]; then
   "Copy failed, exiting..."
 fi
