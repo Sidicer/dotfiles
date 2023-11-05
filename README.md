@@ -19,20 +19,21 @@ sudo pacman -S git && git clone https://github.com/Sidicer/dotfiles.git && cd do
 
 ```sh
 # pkglist.txt:
-foot
-grim
-neofetch
-neovim
-otf-font-awesome
-pinentry-rofi
-ranger
-rofi-lbonn-wayland-git
-slurp
-sway
-swaybg
-swaylock
-waybar
-wl-clipboard
+foot # terminal
+galendae # calendar
+grim # screenshot utility
+neofetch # system information
+neovim # vim refactored
+otf-font-awesome # fonts
+pinentry-rofi # pinentry that works with wayland
+ranger # terminal based file browser
+rofi-lbonn-wayland-git # rofi wayland port
+slurp # are selector for screenshots
+sway # window manager
+swaybg # wallpaper engine for sway
+swaylock # lock screen for sway
+waybar # status bar for sway
+wl-clipboard # wayland clipboard
 # pkglist_n.txt:
 lib32-nvidia-utils
 nvidia
