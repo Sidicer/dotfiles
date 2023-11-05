@@ -3,7 +3,7 @@
   set $mod Mod4
 
   set $term foot
-  set $menu rofi -show run | xargs swaymsg exec --
+  set $menu "rofi -i -modi drun,run,window -show drun"
   set $browser google-chrome-stable
 
   # Screenshot: Select rectangle with Slurp, take screenshot with Grim directly to Clipboard with wl-copy

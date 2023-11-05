@@ -2,6 +2,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
+export QT_QPA_PLATFORM=xcb
 
 GPG_TTY=$(tty)
 export GPG_TTY
