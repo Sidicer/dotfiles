@@ -21,8 +21,9 @@ fi
 
 echo "Installing required packages..."
 packages=$(sort $_SCRIPT_DIR/pkglist.txt)
+audio_packages=$(sort $_SCRIPT_DIR/pkglist_a.txt)
 nvidia_packages=$(sort $_SCRIPT_DIR/pkglist_n.txt)
-yay -S --sudoloop --noconfirm --needed $packages
+yay -S --sudoloop --noconfirm --needed $packages $audio_packages
 if [ $? -eq 1 ]; then
   "Installation failed, exiting..."
 fi

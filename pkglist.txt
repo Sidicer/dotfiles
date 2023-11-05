@@ -1,10 +1,13 @@
 foot
-galendae
+galendae-git
 grim
+imagemagick
+libsixel
 neofetch
 neovim
-otf-font-awesome
+ttf-jetbrains-mono-nerd
 pinentry-rofi
+qt6-wayland
 ranger
 rofi-lbonn-wayland-git
 slurp
@@ -13,4 +16,5 @@ swaybg
 swaylock
 waybar
 wl-clipboard
+xorg-xwayland
 zsh

@@ -20,12 +20,15 @@ sudo pacman -S git && git clone https://github.com/Sidicer/dotfiles.git && cd do
 ```sh
 # pkglist.txt:
 foot # terminal
-galendae # calendar
+galendae-git # calendar
 grim # screenshot utility
+imagemagick # image manipulation
+libsixel # image in terminal
 neofetch # system information
 neovim # vim refactored
-otf-font-awesome # fonts
+ttf-jetbrains-mono-nerd # fonts
 pinentry-rofi # pinentry that works with wayland
+qt6-wayland
 ranger # terminal based file browser
 rofi-lbonn-wayland-git # rofi wayland port
 slurp # are selector for screenshots
@@ -34,6 +37,15 @@ swaybg # wallpaper engine for sway
 swaylock # lock screen for sway
 waybar # status bar for sway
 wl-clipboard # wayland clipboard
+xorg-xwayland
+zsh # Shell
+# pkglist_a.txt
+pavucontrol # audio control
+pinentry-rofi
+pipewire-alsa
+pipewire-pulse
+pipewire-v4l2
+wireplumber
 # pkglist_n.txt:
 lib32-nvidia-utils
 nvidia
@@ -51,3 +63,5 @@ sway-nvidia
 [Arch Linux NVIDIA drivers installation guide](https://github.com/korvahannu/arch-nvidia-drivers-installation-guide) by korvahannu
 
 [sway-nvidia](https://github.com/crispyricepc/sway-nvidia) by crispyricepc
+
+[Awesome Wayland](https://github.com/natpen/awesome-wayland) by natpen
