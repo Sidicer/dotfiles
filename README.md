@@ -24,7 +24,7 @@ galendae # calendar
 grim # screenshot utility
 neofetch # system information
 neovim # vim refactored
-otf-font-awesome # fonts
+ttf-jetbrains-mono-nerd # fonts
 pinentry-rofi # pinentry that works with wayland
 ranger # terminal based file browser
 rofi-lbonn-wayland-git # rofi wayland port

@@ -14,11 +14,14 @@
   set $restartwaybar killall waybar && waybar
 
 # WINDOW RULE 
+  # Virtual machine manager and guest windows to be floating
   for_window [app_id="virt-manager"] floating enable
 
   # Open calendar app on cursor instead of middle of the screen
-  for_window [app_id="galendae"] move position cursor
-  for_window [app_id="galendae"] move down 30px
+  for_window [app_id="galendae"] move position cursor, move down 30px
+
+  # Open audio control on cursor
+  for_window [app_id="pavucontrol"] floating enable, resize set width 500px height 300px, move position cursor, move down 30px
 
 # VISUAL
   gaps inner 8
