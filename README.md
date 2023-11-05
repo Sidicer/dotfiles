@@ -34,6 +34,13 @@ swaybg # wallpaper engine for sway
 swaylock # lock screen for sway
 waybar # status bar for sway
 wl-clipboard # wayland clipboard
+# pkglist_a.txt
+pavucontrol # audio control
+pinentry-rofi
+pipewire-alsa
+pipewire-pulse
+pipewire-v4l2
+wireplumber
 # pkglist_n.txt:
 lib32-nvidia-utils
 nvidia
