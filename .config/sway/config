@@ -1,124 +1,83 @@
 # VARIABLES
-set $mod Mod4
-set $left h
-set $down j
-set $up k
-set $right l
-set $term foot
-set $menu rofi -show run | xargs swaymsg exec --
-set $browser firefox
-set $screenshot grim -g "$(slurp -d)" - | wl-copy -t image/png
+  # Super: Mod4
+  set $mod Mod4
+
+  set $term foot
+  set $menu rofi -show run | xargs swaymsg exec --
+  set $browser firefox
+
+  # Screenshot: Select rectangle with Slurp, take screenshot with Grim directly to Clipboard with wl-copy
+  set $screenshot grim -g "$(slurp -d)" - | wl-copy -t image/png
+
+# WINDOW RULE
+  # 
+  for_window [app_id="virt-manager"] floating enable
 
 # VISUAL
-gaps inner 8
-default_border pixel 2
+  gaps inner 8
+  default_border pixel 2
 
-# class                 border  bground text    indicator child_border
-client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
-client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
-client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
-client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
-client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
+  # dracula               border  bground text    indicator child_border
+  client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
+  client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
+  client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
+  client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
+  client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
+  client.background       #F8F8F2
 
-client.background       #F8F8F2
+# DISPLAYS
+  # Wallpaper
+  output * bg /home/sidicer/Pictures/wallpaperflare.com_wallpaper.jpg fill
 
-### Output configuration
-#
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/sidicer/Pictures/wallpaperflare.com_wallpaper.jpg fill
-#
-# Example configuration:
-#
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
-#
-# You can get the names of your outputs by running: swaymsg -t get_outputs
+  # Define workspace per monitor
+  workspace 1 output DP-3
+  workspace 2 output DP-2
+  workspace 3 output DP-1
 
-workspace 1 output DP-3
-workspace 2 output DP-2
-workspace 3 output DP-1
+  # Set resolution, refresh rate and position for displays
+  output DP-3 position 0,0 transform 90
+  output DP-2 position 1080,100 mode 3440x1440@143.945Hz
+  output DP-1 position 4520,100 transform 270
 
-output DP-3 position 0,0 transform 90
-output DP-2 position 1080,100 mode 3440x1440@143.945Hz
-output DP-1 position 4520,100 transform 270
+# KEY BINDINGS
+  # Start a terminal
+  bindsym $mod+Return exec $term
 
-### Idle configuration
-#
-# Example configuration:
-#
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#          before-sleep 'swaylock -f -c 000000'
-#
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
+  # Kill focused window
+  bindsym $mod+Shift+q kill
 
-### Input configuration
-#
-# Example configuration:
-#
-#   input "2:14:SynPS/2_Synaptics_TouchPad" {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
-#
-# You can get the names of your inputs by running: swaymsg -t get_inputs
-# Read `man 5 sway-input` for more information about this section.
+  # Start your launcher
+  bindsym $mod+d exec $menu
 
-### Key bindings
-#
-# Basics:
-#
-    # Start a terminal
-    bindsym $mod+Return exec $term
+  # Start your browser
+  bindsym $mod+Shift+b exec $browser
 
-    # Kill focused window
-    bindsym $mod+Shift+q kill
+  # Screenshot
+  bindsym $mod+Shift+s exec $screenshot
 
-    # Start your launcher
-    bindsym $mod+d exec $menu
+  # Lock screen
+  bindsym $mod+l exec swaylock
 
-    # Start your browser
-    bindsym $mod+Shift+b exec $browser
+# Drag floating windows by holding down $mod and left mouse button.
+# Resize them with right mouse button + $mod.
+# Despite the name, also works for non-floating windows.
+# Change normal to inverse to use left mouse button for resizing and right
+# mouse button for dragging.
+floating_modifier $mod normal
 
-    # Screenshot
-    bindsym $mod+Shift+s exec $screenshot
+# Reload the configuration file
+bindsym $mod+Shift+c reload
 
-    # Drag floating windows by holding down $mod and left mouse button.
-    # Resize them with right mouse button + $mod.
-    # Despite the name, also works for non-floating windows.
-    # Change normal to inverse to use left mouse button for resizing and right
-    # mouse button for dragging.
-    floating_modifier $mod normal
-
-    # Reload the configuration file
-    bindsym $mod+Shift+c reload
-
-    # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+# Exit sway (logs you out of your Wayland session)
+bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 #
 # Moving around:
 #
-    # Move your focus around
-    bindsym $mod+$left focus left
-    bindsym $mod+$down focus down
-    bindsym $mod+$up focus up
-    bindsym $mod+$right focus right
-    # Or use $mod+[up|down|left|right]
     bindsym $mod+Left focus left
     bindsym $mod+Down focus down
     bindsym $mod+Up focus up
     bindsym $mod+Right focus right
 
-    # Move the focused window with the same, but add Shift
-    bindsym $mod+Shift+$left move left
-    bindsym $mod+Shift+$down move down
-    bindsym $mod+Shift+$up move up
-    bindsym $mod+Shift+$right move right
-    # Ditto, with arrow keys
     bindsym $mod+Shift+Left move left
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
@@ -187,20 +146,14 @@ output DP-1 position 4520,100 transform 270
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
     bindsym $mod+minus scratchpad show
-#
-# Resizing containers:
-#
+
+# RESIZING WINDOWS
 mode "resize" {
     # left will shrink the containers width
     # right will grow the containers width
     # up will shrink the containers height
     # down will grow the containers height
-    bindsym $left resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
-    bindsym $right resize grow width 10px
 
-    # Ditto, with arrow keys
     bindsym Left resize shrink width 10px
     bindsym Down resize grow height 10px
     bindsym Up resize shrink height 10px
@@ -212,9 +165,5 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
 include /etc/sway/config.d/*
 exec waybar
