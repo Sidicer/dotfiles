@@ -4,14 +4,21 @@
 
   set $term foot
   set $menu rofi -show run | xargs swaymsg exec --
-  set $browser firefox
+  set $browser google-chrome-stable
 
   # Screenshot: Select rectangle with Slurp, take screenshot with Grim directly to Clipboard with wl-copy
   set $screenshot grim -g "$(slurp -d)" - | wl-copy -t image/png
 
-# WINDOW RULE
-  # 
+  # Helpers
+  set $killsway swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+  set $restartwaybar killall waybar && waybar
+
+# WINDOW RULE 
   for_window [app_id="virt-manager"] floating enable
+
+  # Open calendar app on cursor instead of middle of the screen
+  for_window [app_id="galendae"] move position cursor
+  for_window [app_id="galendae"] move down 30px
 
 # VISUAL
   gaps inner 8
@@ -69,7 +76,11 @@ floating_modifier $mod normal
 bindsym $mod+Shift+c reload
 
 # Exit sway (logs you out of your Wayland session)
-bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+bindsym $mod+Shift+e exec $killsway
+
+# Restart waybar
+bindsym $mod+Shift+w exec $restartwaybar
+
 #
 # Moving around:
 #

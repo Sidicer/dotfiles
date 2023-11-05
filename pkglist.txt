@@ -1,5 +1,5 @@
 foot
-galendae
+galendae-git
 grim
 neofetch
 neovim
