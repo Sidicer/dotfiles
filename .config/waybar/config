@@ -1,8 +1,9 @@
-{
+[{
+    "output": "DP-2",
+
     "layer": "top",
     "position": "top",
     "height": 30,
-    
     "include": ["~/.config/waybar/modules.json"],
 
     "modules-left": ["sway/workspaces", "sway/mode"],
@@ -17,4 +18,19 @@
         "clock#date",
         "clock#time"
     ],
-}
+},
+{
+    "output": "!DP-2",
+
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "include": ["~/.config/waybar/modules.json"],
+
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["sway/window"],
+    "modules-right": [
+        "clock#date",
+        "clock#time"
+    ],
+}]

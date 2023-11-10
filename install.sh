@@ -11,7 +11,6 @@ IFS=$'\n\t'
 PATH=/usr/local/bin:$PATH
 
 _SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-export _SCRIPT_DIR=${_SCRIPT_DIR%/*}
 
 echo "Installing dependencies and Yay..."
 sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay &&  makepkg -si
