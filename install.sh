@@ -27,6 +27,9 @@ if [ $? -eq 1 ]; then
   "Installation failed, exiting..."
 fi
 
+echo "Installing oh-my-zsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 echo "Copying configuration to home directory..."
 cp -r $_SCRIPT_DIR/.config $_SCRIPT_DIR/.gnupg $_SCRIPT_DIR/.zshrc $HOME/.
 if [ $? -eq 1 ]; then
