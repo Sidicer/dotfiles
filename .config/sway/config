@@ -9,7 +9,23 @@
   # Screenshot: Select rectangle with Slurp, take screenshot with Grim directly to Clipboard with wl-copy
   set $screenshot grim -g "$(slurp -d)" - | wl-copy -t image/png
 
-  # Helpers
+  # Mod-Keys
+  set $key_audiomute XF86AudioMute
+  set $key_inputmute XF86AudioMicMute
+  set $key_volup XF86AudioRaiseVolume
+  set $key_voldown XF86AudioLowerVolume
+  set $key_brightnessup XF86MonBrightnessUp
+  set $key_brightnesdown XF86MonBrightnessDown
+
+  set $volumetoggle pactl set-sink-mute @DEFAULT_SINK@ toggle
+  set $inputmute pactl set-source-mute alsa_input.pci-0000_05_00.6.7.HiFi__hw_acp__source toggle
+  set $volumeup pactl set-sink-volume @DEFAULT_SINK@ +5%
+  set $volumedown pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+  set $brightnessup light -A 2.0
+  set $brightnessdown light -U 2.0
+
+  # Additional
   set $killsway swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
   set $restartwaybar killall waybar && waybar
 
@@ -21,7 +37,7 @@
   for_window [app_id="galendae"] move position cursor, move down 30px
 
   # Open audio control on cursor
-  for_window [app_id="pavucontrol"] floating enable, resize set width 500px height 300px, move position cursor, move down 30px
+  for_window [app_id="pavucontrol"] floating enable, resize set width 500px height 500px, move position cursor, move down 30px
 
 # VISUAL
   gaps inner 8
@@ -61,9 +77,15 @@
   # Suspend laptop
   bindswitch --reload --locked lid:on exec swaylock & systemctl suspend
 
-  # Brightness
-  bindsym XF86MonBrightnessUp exec light -A 2.0
-  bindsym XF86MonBrightnessDown exec light -U 2.0
+  # Mod-Keys
+  bindsym $key_brightnessup exec $brightnessup
+  bindsym $key_brightnesdown exec $brightnessdown
+
+  bindsym $key_audiomute exec $volumetoggle
+  bindsym $key_inputmute exec $inputmute
+  bindsym $key_volup exec $volumeup
+  bindsym $key_voldown exec $volumedown
+
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
 # Despite the name, also works for non-floating windows.
