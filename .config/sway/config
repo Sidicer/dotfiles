@@ -37,7 +37,7 @@
 
 # DISPLAYS
   # Wallpaper
-  output * bg /home/sidicer/Pictures/Wallpapers/iifTMFN.jpeg fill
+  output * bg /path/to/wallpaper fill
 
 # KEY BINDINGS
   # Start a terminal
