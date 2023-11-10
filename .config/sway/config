@@ -37,7 +37,7 @@
 
 # DISPLAYS
   # Wallpaper
-  output * bg /path/to/wallpaper fill
+  # output * bg /path/to/wallpaper fill
 
 # KEY BINDINGS
   # Start a terminal
