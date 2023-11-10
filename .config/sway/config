@@ -37,7 +37,7 @@
 
 # DISPLAYS
   # Wallpaper
-  # output * bg /path/to/wallpaper fill
+  output * bg /home/sidicer/Pictures/Wallpapers/iifTMFN.jpeg fill
 
 # KEY BINDINGS
   # Start a terminal
@@ -61,6 +61,9 @@
   # Suspend laptop
   bindswitch --reload --locked lid:on exec swaylock & systemctl suspend
 
+  # Brightness
+  bindsym XF86MonBrightnessUp exec light -A 2.0
+  bindsym XF86MonBrightnessDown exec light -U 2.0
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
 # Despite the name, also works for non-floating windows.

@@ -3,6 +3,7 @@ galendae-git
 grim
 imagemagick
 libsixel
+light
 neofetch
 neovim
 ttf-jetbrains-mono-nerd

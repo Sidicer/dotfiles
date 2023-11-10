@@ -24,6 +24,7 @@ galendae-git # calendar
 grim # screenshot utility
 imagemagick # image manipulation
 libsixel # image in terminal
+light # control backlight
 neofetch # system information
 neovim # vim refactored
 ttf-jetbrains-mono-nerd # fonts
