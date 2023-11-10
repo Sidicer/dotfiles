@@ -37,17 +37,7 @@
 
 # DISPLAYS
   # Wallpaper
-  output * bg /home/sidicer/Pictures/wallpaperflare.com_wallpaper.jpg fill
-
-  # Define workspace per monitor
-  workspace 1 output DP-3
-  workspace 2 output DP-2
-  workspace 3 output DP-1
-
-  # Set resolution, refresh rate and position for displays
-  output DP-3 position 0,0 transform 90
-  output DP-2 position 1080,100 mode 3440x1440@143.945Hz
-  output DP-1 position 4520,100 transform 270
+  # output * bg /path/to/wallpaper fill
 
 # KEY BINDINGS
   # Start a terminal
