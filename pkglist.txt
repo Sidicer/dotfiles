@@ -6,6 +6,7 @@ libsixel
 light
 neofetch
 neovim
+otf-font-awesome
 ttf-jetbrains-mono-nerd
 pinentry-rofi
 qt6-wayland

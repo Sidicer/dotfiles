@@ -27,6 +27,7 @@ libsixel # image in terminal
 light # control backlight
 neofetch # system information
 neovim # vim refactored
+otf-font-awesome # fonts
 ttf-jetbrains-mono-nerd # fonts
 pinentry-rofi # pinentry that works with wayland
 qt6-wayland
