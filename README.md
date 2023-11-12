@@ -20,12 +20,15 @@ sudo pacman -S git && git clone https://github.com/Sidicer/dotfiles.git && cd do
 ```sh
 # pkglist.txt:
 foot # terminal
+fprintd # fingerprint daemon
 galendae-git # calendar
 grim # screenshot utility
 imagemagick # image manipulation
 libsixel # image in terminal
+light # control backlight
 neofetch # system information
 neovim # vim refactored
+otf-font-awesome # fonts
 ttf-jetbrains-mono-nerd # fonts
 pinentry-rofi # pinentry that works with wayland
 qt6-wayland
