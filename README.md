@@ -20,6 +20,7 @@ sudo pacman -S git && git clone https://github.com/Sidicer/dotfiles.git && cd do
 ```sh
 # pkglist.txt:
 foot # terminal
+fprintd # fingerprint daemon
 galendae-git # calendar
 grim # screenshot utility
 imagemagick # image manipulation

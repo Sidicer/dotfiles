@@ -1,4 +1,5 @@
 foot
+fprintd
 galendae-git
 grim
 imagemagick
