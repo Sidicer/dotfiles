@@ -38,6 +38,7 @@ slurp # are selector for screenshots
 sway # window manager
 swaybg # wallpaper engine for sway
 swaylock # lock screen for sway
+swaync # notification daemon
 waybar # status bar for sway
 wl-clipboard # wayland clipboard
 xorg-xwayland

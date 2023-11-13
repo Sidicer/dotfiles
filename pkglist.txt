@@ -17,6 +17,7 @@ slurp
 sway
 swaybg
 swaylock
+swaync
 waybar
 wl-clipboard
 xorg-xwayland
