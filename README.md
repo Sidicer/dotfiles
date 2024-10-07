@@ -2,9 +2,11 @@
 
 ![image](https://github.com/user-attachments/assets/e9578ed8-bc3c-444d-ba1b-a50d5fac8215)
 
+Install script skips anything NVIDIA related if your setup does not have NVIDIA gpu, so this can be used for any Arch + Sway deployment
+
 ## Prerequisites
 
-1. Arch Linux already deployed on your system
+1. Arch Linux already installed on your system
 2. Sudo user created and logged in with it
 3. `pacman -Syu` ran at least once
 
@@ -19,7 +21,7 @@ sudo pacman -S git && git clone https://github.com/Sidicer/dotfiles.git && cd do
 
 ```sh
 # pkglist.txt:
-foot # terminal
+kitty # terminal
 fprintd # fingerprint daemon
 galendae-git # calendar
 grim # screenshot utility
@@ -28,8 +30,8 @@ libsixel # image in terminal
 light # control backlight
 neofetch # system information
 neovim # vim refactored
-otf-font-awesome # fonts
-ttf-jetbrains-mono-nerd # fonts
+noto-fonts # font
+nwg-look # GTK theme settings for Wayland
 pinentry-rofi # pinentry that works with wayland
 qt6-wayland
 ranger # terminal based file browser

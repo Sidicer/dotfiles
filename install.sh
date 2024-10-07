@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-# Arch w/ Sway on NVIDIA
-# packages & dotfiles
-# 2023 Deividas Gedgaudas • sidicer.lt
-
 set -o nounset
 set -o errtrace
 set -o pipefail
