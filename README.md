@@ -16,6 +16,14 @@ Install script skips anything NVIDIA related if your setup does not have NVIDIA 
 sudo pacman -S git && git clone https://github.com/Sidicer/dotfiles.git && cd dotfiles
 ./install.sh
 ```
+> [!NOTE]
+> Waybar will not have icons after the setup
+
+Install `nerd-fonts` later manually. I am not including it with the packages as the download is 8GiB+
+
+```sh
+sudo pacman -S nerd-fonts
+```
 
 ## Package list:
 
