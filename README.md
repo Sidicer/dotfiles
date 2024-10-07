@@ -1,6 +1,6 @@
 # Arch Linux w/ Sway WM on Nvidia GPU
 
-Here I will be collecting my configuration files (dotfiles) and additional helper scripts or how-to's related to my Arch/Sway/Nvidia deployment.
+![image](https://github.com/user-attachments/assets/e9578ed8-bc3c-444d-ba1b-a50d5fac8215)
 
 ## Prerequisites
 
