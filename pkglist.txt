@@ -1,14 +1,14 @@
-foot
 fprintd
 galendae-git
 grim
 imagemagick
+kitty
 libsixel
 light
 neofetch
 neovim
-otf-font-awesome
-ttf-jetbrains-mono-nerd
+noto-fonts
+nwg-look
 pinentry-rofi
 qt6-wayland
 ranger
