@@ -7,7 +7,7 @@
     "include": ["~/.config/waybar/modules.json"],
 
     "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["sway/window"],
+    "modules-center": ["clock#date", "clock#time"],
     "modules-right": [
         "temperature",
         "network",
@@ -15,7 +15,6 @@
         "battery",
         "pulseaudio",
         "tray",
-        "clock#date",
-        "clock#time"
+        "custom/notification"
     ],
 }]
