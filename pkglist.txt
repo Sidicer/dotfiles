@@ -16,7 +16,7 @@ rofi-lbonn-wayland-git
 slurp
 sway
 swaybg
-swaylock
+swaylock-effects
 swaync
 waybar
 wl-clipboard
