@@ -16,3 +16,5 @@ include /etc/sway/config.d/*
 exec waybar
 exec nm-applet
 exec swaync
+#exec --no-startup-id /usr/lib/xdg-desktop-portal -r
+
