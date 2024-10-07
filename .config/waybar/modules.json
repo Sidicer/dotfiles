@@ -88,11 +88,12 @@
       "car": "",
       "default": ["", ""]
     },
-    "on-click": "pavucontrol"
+    "on-click": "pavucontrol",
+    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
   },
 
   "temperature": {
-    "hwmon-path": "/sys/class/hwmon/hwmon4/temp1_input",
+    "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
     "critical-threshold": 80,
     "interval": 5,
     "format": "{icon} {temperatureC}°C",

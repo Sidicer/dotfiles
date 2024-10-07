@@ -1,6 +1,5 @@
 [{
-    "output": "eDP-1",
-
+    "output": "!DP-6",
     "layer": "top",
     "position": "top",
     "height": 30,
@@ -16,5 +15,21 @@
         "pulseaudio",
         "tray",
         "custom/notification"
-    ],
+    ]
+},
+{
+    "output": "DP-6",
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "include": ["~/.config/waybar/modules.json"],
+
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["clock#date", "clock#time"],
+    "modules-right": [
+        "battery",
+        "pulseaudio",
+        "tray",
+        "custom/notification"
+    ]
 }]
