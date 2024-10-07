@@ -2,7 +2,7 @@
   # Super: Mod4
   set $mod Mod4
 
-  set $term konsole
+  set $term kitty
   set $menu "rofi -i -modi drun,run,window -show drun"
   set $browser firefox
 
