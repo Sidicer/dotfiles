@@ -9,7 +9,10 @@ neofetch
 neovim
 noto-fonts
 nwg-look
+otf-font-awesome
 pinentry-rofi
+qt5ct
+qt5ct
 qt6-wayland
 ranger
 rofi-lbonn-wayland-git
