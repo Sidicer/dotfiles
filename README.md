@@ -36,6 +36,7 @@ grim # screenshot utility
 imagemagick # image manipulation
 libsixel # image in terminal
 light # control backlight
+ncdu # Disk usage analyzer with an ncurses interface
 neofetch # system information
 neovim # vim refactored
 noto-fonts # font
