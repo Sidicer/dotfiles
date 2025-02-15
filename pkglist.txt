@@ -5,6 +5,7 @@ imagemagick
 kitty
 libsixel
 light
+ncdu
 neofetch
 neovim
 noto-fonts
