@@ -1,8 +1,6 @@
-# Arch Linux w/ Sway WM on Nvidia GPU
+# Arch Linux w/ Sway WM 
 
 ![image](https://github.com/user-attachments/assets/e9578ed8-bc3c-444d-ba1b-a50d5fac8215)
-
-Install script skips anything NVIDIA related if your setup does not have NVIDIA gpu, so this can be used for any Arch + Sway deployment
 
 ## Prerequisites
 
@@ -61,22 +59,8 @@ pipewire-alsa
 pipewire-pulse
 pipewire-v4l2
 wireplumber
-# pkglist_n.txt:
-lib32-nvidia-utils
-nvidia
-nvidia-settings
-nvidia-utils
-sway-nvidia
 ```
 
-## Notes
-
-`nvidia.hook` is required for succesfully updating NVIDIA drivers. If you do not regenerate your initramfs there is going to be an API mismatch after reboot and you won't be able to launch Sway.
-
 ## Obligation
-
-[Arch Linux NVIDIA drivers installation guide](https://github.com/korvahannu/arch-nvidia-drivers-installation-guide) by korvahannu
-
-[sway-nvidia](https://github.com/crispyricepc/sway-nvidia) by crispyricepc
 
 [Awesome Wayland](https://github.com/natpen/awesome-wayland) by natpen

@@ -22,6 +22,7 @@ sway
 swaybg
 swaylock-effects
 swaync
+the_silver_searcher
 waybar
 wl-clipboard
 xorg-xwayland
